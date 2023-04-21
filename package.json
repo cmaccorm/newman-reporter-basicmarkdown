@@ -1,0 +1,11 @@
+{
+  "name": "newman-reporter-markdown",
+  "version": "1.0.0",
+  "description": "A basic markdown reporter for newman",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cmaccorm",
+  "license": "ISC"
+}
