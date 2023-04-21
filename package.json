@@ -4,8 +4,11 @@
   "description": "A basic markdown reporter for newman",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No test specified\""
   },
   "author": "cmaccorm",
-  "license": "ISC"
+  "license": "ISC",
+  "publishConfig": {
+	"registry": "https://github.com/cmaccorm/newman-reporter-markdown"
+	}
 }
