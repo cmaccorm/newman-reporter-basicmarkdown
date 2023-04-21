@@ -1,5 +1,5 @@
 {
-  "name": "newman-reporter-basicMarkdown",
+  "name": "@cmaccorm/newman-reporter-basicMarkdown",
   "version": "1.0.0",
   "description": "A basic markdown reporter for newman",
   "main": "index.js",
@@ -8,7 +8,12 @@
   },
   "author": "cmaccorm",
   "license": "ISC",
+  "repository": {
+	"type": "git",
+	"url": "git+https://github.com/cmaccorm/newman-reporter-basicMarkdown.git"	
+  },
   "publishConfig": {
-	"registry": "https://github.com/cmaccorm/newman-reporter-markdown"
-	}
+	  "registry": "https://npm.pkg.github.com/",
+	  "access": "public"
+  }
 }
