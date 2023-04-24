@@ -3,9 +3,7 @@
 
 name: newman-reporter-basicmarkdown
 
-on:
-  release:
-    types: [created]
+on: push
 
 jobs:
   publish-npm:
