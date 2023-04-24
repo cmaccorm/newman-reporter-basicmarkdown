@@ -4,17 +4,22 @@ module.exports = function newmanMarkdownReporter (newman, reporterOptions) {
 
     //Before an HTTP request is sent
     newman.on('beforeRequest', (err, args) => {
-      console.log('item name ' + args.item.name)
+      append(" \n") //extra newline for formatting (using the U+205F empty character)
       append("### " + args.item.name)
       append(args.request.url)
-      this.count = 0
+      this.count = 1
     })
+    
+    newman.on('request', (err, args) => {
+      if (err) {
+      	append("❗ **Request failure, assertions skipped** ❗")
+      }
+    }
 
     var assertionParams = [];
 
     //For every test assertion done within test scripts
     newman.on('assertion', (err, args) => {
-      this.count++
       console.log('assertion name ' + args.assertion)
       if (err) {
         assertionParams.push(new Array("❌", this.count, "", "**Assertion failed!**", args.assertion))
@@ -23,6 +28,7 @@ module.exports = function newmanMarkdownReporter (newman, reporterOptions) {
       } else {
         assertionParams.push(new Array("⏸️", this.count, "", "**Assertion skipped.**", args.assertion))
       }
+      this.count++
     })
 
     //After test script execution completes
@@ -35,12 +41,13 @@ module.exports = function newmanMarkdownReporter (newman, reporterOptions) {
     })
 
     //Prior to the completion of the run
-    newman.on('beforeDone', (err, args) => {
+    newman.on('beforeDone', (err, args) => {   
       if (err) {
         console.log('Encountered an error')
         return;
       }
 
+      markdownContent = markdownContent.trim()
       newman.exports.push({
         name: 'markdown-reporter',
         default: 'markdown-report.txt',
@@ -48,7 +55,7 @@ module.exports = function newmanMarkdownReporter (newman, reporterOptions) {
         content: markdownContent
       })
 
-      console.log('CSV write complete!')
+      console.log('Completed writing Markdown file!')
     })
 
 }

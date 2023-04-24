@@ -1,6 +1,6 @@
 {
-  "name": "@cmaccorm/newman-reporter-markdown",
-  "version": "1.0.0",
+  "name": "newman-reporter-basicmarkdown",
+  "version": "1.0.5",
   "description": "A basic markdown reporter for newman",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,12 @@
 	"url": "git+https://github.com/cmaccorm/newman-reporter-markdown.git"	
   },
   "publishConfig": {
-	  "registry": "https://npm.pkg.github.com/",
+	  "registry": "https://registry.npmjs.org/",
 	  "access": "public"
-  }
+  },
+  "keywords": [
+	"postman",
+	"newman",
+	"markdown"
+  ]
 }
