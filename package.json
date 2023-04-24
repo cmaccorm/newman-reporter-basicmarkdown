@@ -10,7 +10,7 @@
   "license": "ISC",
   "repository": {
 	"type": "git",
-	"url": "git+https://github.com/cmaccorm/newman-reporter-markdown.git"	
+	"url": "git+https://github.com/cmaccorm/newman-reporter-basicmarkdown.git"	
   },
   "publishConfig": {
 	  "registry": "https://registry.npmjs.org/",
