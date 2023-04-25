@@ -23,22 +23,7 @@ https://exampleRequest2Url.com
 
 ...which looks like the below when formatted as Markdown:
 
-### Request Name 1
-
-https://exampleRequest1Url.com
-
-✅ [1 / 2] **Assertion passed!** `Status code is 200`
-
-❌ [2 / 2] **Assertion failed!** `JSON response body has valid fields`
-
- 
-### Request Name 2
-
-https://exampleRequest2Url.com
-
-✅ [1 / 2] **Assertion passed!** `Status code is 200`
-
-⏸️ [2 / 2] **Assertion skipped.** `JSON response matches schema`
+![example markdown_text](images/markdownExample.png)
 
 ## Usage
 
