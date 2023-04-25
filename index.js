@@ -10,11 +10,11 @@ module.exports = function newmanMarkdownReporter (newman, reporterOptions) {
       this.count = 1
     })
     
-    newman.on('request', (err, args) => {
-      if (err) {
-      	append("❗ **Request failure, assertions skipped** ❗")
-      }
-    }
+//     newman.on('request', (err, args) => {
+//       if (err) {
+//       	append("❗ **Request failure, assertions skipped** ❗")
+//       }
+//     }
 
     var assertionParams = [];
 
