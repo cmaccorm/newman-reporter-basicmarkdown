@@ -1,6 +1,6 @@
 {
   "name": "newman-reporter-basicmarkdown",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A basic markdown reporter for newman",
   "main": "index.js",
   "scripts": {
