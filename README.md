@@ -42,7 +42,9 @@ https://exampleRequest2Url.com
 
 ## Usage
 
-Install using `npm i newman-reporter-basicmarkdown` 
+This reporter is used with [Newman](https://github.com/postmanlabs/newman) so if you haven't already installed that run `npm install -g newman`.
 
-Use by specifying the Markdown reporter as a reporter option like so: `newman run collection.json -r markdown`
+Install using `npm i newman-reporter-basicmarkdown`.
+
+Use by specifying the Markdown reporter as a reporter option like so: `newman run collection.json -r markdown`.
 
